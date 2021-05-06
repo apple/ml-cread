@@ -9,7 +9,7 @@ Given an ongoing dialogue between a user and a dialogue assistant, for the user 
 ## Dataset
 The MuDoCo dataset is a public dataset that contains 7.5k task\-oriented multi\-turn dialogues across 6 domains (calling, messaging, music, news, reminders, weather). Each dialogue turn is annotated with coreference links (`links` field). Please refer to [MuDoCo](https://github.com/facebookresearch/mudoco) for more details.
 
-In the **MuDoCo\-QR\-dataset** used in work, we annotate the query rewrite for each utterance, including both user and system turn. On top of the MudoCo data format, we add three fields `graded`, `rewrite_required` and `rewritten_utterance`. Most of the turns are with annotated with query rewrite (`graded`==`true`). Only 1.4% dialogue turns with incomplete dialogue context (e.g., missing turns) in MuDoCo are filtered out (`graded`==`false`). `rewrite_required` records whether the input utterance (`utterance`) should be rewritten or not. `rewritten_utterance` is the rewritten query, same as the `utterance` if `rewrite_required`==`false`.
+In the **MuDoCo\-QR\-dataset** used in work, we annotate the query rewrite for each utterance, including both user and system turn. On top of the MudoCo data format, we add three fields `graded`, `rewrite_required` and `rewritten_utterance`. Most of the turns are with annotated with query rewrite (`graded` is true). Only 1.4% dialogue turns with incomplete dialogue context (e.g., missing turns) in MuDoCo are filtered out (`graded` is false). `rewrite_required` records whether the input utterance should be rewritten or not. `rewritten_utterance` is the rewritten query, same as the utterance if `rewrite_required` is false.
 
 ```json
 {
@@ -41,16 +41,13 @@ In the **MuDoCo\-QR\-dataset** used in work, we annotate the query rewrite for e
 }
 ```
 
-## Running the Code
 ## Requirements
----
 python3.6 and the packages in `requirements.txt`, install them by running
 ```console
 >>> pip install -r requirements.txt
 ```
 
 ## Data Pre-processing
----
 First run the following command to prepare the data for training.
 
 The processed data will be stored in the `proc_data/` directory.
@@ -61,7 +58,6 @@ The processed data will be stored in the `proc_data/` directory.
 
 
 ## Training
----
 Run `train.sh` to train the model, which calls `main.py` with default hyper-parameters.
 
 `job_name` can be random but not `trained-cread`.
@@ -74,7 +70,6 @@ The model checkpoint will be stored at `checkpoint/$job_name`, and training log 
 
 
 ## Evaluation
----
 Run `decode.sh` to decode using a trained model. `job_name` is the same as specified in training.
 
 ```console
@@ -103,19 +98,16 @@ The training log (`log/trained-cread.log`), and decoded results (`decode/trained
 
 - coref\_layer\_idx: which gpt2 layers to use for coreference resolution, e.g., "1,5,11" uses three layers. n is between 0 to 11, if default gpt2\-small is used.
 - n\_coref\_head: how many attention heads to use in each layer for coreference resolution. n is between 1 to 12.
-- use_coref\_attn: whether to use coref2qr attention mechanism
-- use\_binary\_cls: whether to use binary rewriting classifier
+- use_coref\_attn: whether to use coref2qr attention mechanism.
+- use\_binary\_cls: whether to use binary rewriting classifier.
 
 More detailed explanation of other arguments can be found in `utils/utils.py`.
 
 ## Citation
----
 TODO
 
 ## License
----
 The code in this repository is licensed according to the [LICENSE](LICENSE) file.
 
 ## Contact Us
----
 Please contact bht26@cam.ac.uk or hong\_yu@apple.com, or raise an issue in this repository.
