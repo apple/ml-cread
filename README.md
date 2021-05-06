@@ -68,6 +68,8 @@ Run `train.sh` to train the model, which calls `main.py` with default hyper-para
 
 The model checkpoint will be stored at `checkpoint/$job_name`, and training log file is at `log/$job_name.log`
 
+A reference training log (`log/trained-cread.log`) is provided.
+
 
 ## Evaluation
 Run `decode.sh` to decode using a trained model. `job_name` is the same as specified in training.
@@ -78,19 +80,8 @@ Run `decode.sh` to decode using a trained model. `job_name` is the same as speci
 
 Evaluation result, with both generated rewritten utterances and model performance, is recorded in `deocde/$job_name.json`.
 
+A reference decoding file (`decode/trained-cread.json`) is provided.
 
-## Reproducing Results
-We also provide a trained model (named `trained-cread`) for reproducing results reported in the paper. Simply run the following command.
-
-Note that this only gives one seed reuslt, which is slightly different than 5 seeds averaged results reported in the paper.
-
-```console
->>> bash decode.sh trained-cread
-```
-
-This model checkpoint is obtained using the default values specified in `train.sh`.
-
-The training log (`log/trained-cread.log`), and decoded results (`decode/trained-cread.json`) of this model checkpoint are provided for reference.
 
 
 ## Key hyper-parameters in main.py
