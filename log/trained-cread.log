@@ -1,0 +1,88 @@
+Namespace(adam_epsilon=1e-12, checkpoint='checkpoint/cread', class0_loss_w=1.0, class1_loss_w=1.5, copy_not_rewrite=True, coref_attn_layer=7, coref_attn_mention=False, coref_attn_share_between_layer=True, coref_layer_idx=[10, 11], dec_max_len=100, decode_file='', dev_conll='proc_data/all/dev.conll', dev_file='proc_data/all/dev.json', disable_display=False, eps=1e-12, eval_batch_size=1, eval_interval=16000, filter_not_rewrite_loss=True, gradient_accumulation_steps=4, learning_rate=5e-05, load_pretrained_weight=True, max_epoch=16, max_grad_norm=1.0, mode='training', model_name='cread', model_name_or_path='gpt2', n_coref_head=3, no_improve_max=5, num_beams=1, seed=1, task='qr_coref', temperature=1.0, test_conll='proc_data/all/test.conll', test_file='proc_data/all/test.json', train_batch_size=15, train_file='proc_data/all/train.json', train_size=-1, use_binary_cls=True, use_coref_attn=True, use_scheduler=True, warmup_steps=0)
+Load pretrained GPT
+Data Statistics: train -> 16024 examples
+Data Statistics: dev -> 1901 examples
+Data Statistics: dev -> 1901 examples
+Test before training!
+Epoch: -1 | dev total loss: 13.905 (binary: 0.79, rewrite: 10.247, mention: 0.810, reference: 2.060) | time: 44.3
+Start training!
+******************************************************************************************
+Epoch: 0 | train total loss: 3.816 (binary: 0.35, rewrite: 1.192, mention: 0.297, reference: 1.975) | time: 278.5
+******************************************************************************************
+Epoch: 1 | dev total loss: 0.853 (binary: 0.23, rewrite: 0.109, mention: 0.116, reference: 0.397) | time: 43.4
+Epoch: 1 | dev: QR Binary F1: 83.83 (90.58), LM: P: 86.24 R: 86.05 F1: 85.54 (46.50) | COREF P: 71.21 R: 59.60 F1: 64.87 (60.27) | time: 209.9
+Best score in "best-JOINT": 75.21. Save model in checkpoint/cread_best-JOINT!
+
+Epoch: 1 | train total loss: 1.629 (binary: 0.19, rewrite: 0.388, mention: 0.130, reference: 0.920) | time: 553.5
+******************************************************************************************
+Epoch: 2 | dev total loss: 0.750 (binary: 0.17, rewrite: 0.103, mention: 0.104, reference: 0.370) | time: 42.8
+Epoch: 2 | dev: QR Binary F1: 87.20 (93.37), LM: P: 87.84 R: 87.04 F1: 86.98 (57.30) | COREF P: 74.75 R: 63.33 F1: 68.56 (64.63) | time: 171.7
+Best score in "best-JOINT": 77.77. Save model in checkpoint/cread_best-JOINT!
+
+Epoch: 2 | train total loss: 1.195 (binary: 0.16, rewrite: 0.281, mention: 0.106, reference: 0.649) | time: 494.2
+******************************************************************************************
+Epoch: 3 | dev total loss: 0.745 (binary: 0.17, rewrite: 0.100, mention: 0.100, reference: 0.369) | time: 42.7
+Epoch: 3 | dev: QR Binary F1: 87.76 (93.53), LM: P: 88.04 R: 87.76 F1: 87.37 (54.48) | COREF P: 77.47 R: 64.04 F1: 70.11 (66.67) | time: 186.6
+Best score in "best-JOINT": 78.74. Save model in checkpoint/cread_best-JOINT!
+
+Epoch: 3 | train total loss: 0.917 (binary: 0.13, rewrite: 0.223, mention: 0.091, reference: 0.470) | time: 508.9
+******************************************************************************************
+Epoch: 4 | dev total loss: 0.818 (binary: 0.22, rewrite: 0.104, mention: 0.098, reference: 0.399) | time: 43.0
+Epoch: 4 | dev: QR Binary F1: 86.57 (92.69), LM: P: 88.05 R: 87.52 F1: 87.26 (56.24) | COREF P: 75.79 R: 69.12 F1: 72.30 (68.76) | time: 188.6
+Best score in "best-JOINT": 79.78. Save model in checkpoint/cread_best-JOINT!
+
+Epoch: 4 | train total loss: 0.723 (binary: 0.11, rewrite: 0.186, mention: 0.080, reference: 0.348) | time: 511.6
+******************************************************************************************
+Epoch: 5 | dev total loss: 0.839 (binary: 0.22, rewrite: 0.107, mention: 0.094, reference: 0.416) | time: 43.3
+Epoch: 5 | dev: QR Binary F1: 87.60 (93.27), LM: P: 88.42 R: 88.08 F1: 87.68 (58.36) | COREF P: 78.51 R: 68.63 F1: 73.23 (69.84) | time: 185.9
+Best score in "best-JOINT": 80.45. Save model in checkpoint/cread_best-JOINT!
+
+Epoch: 5 | train total loss: 0.596 (binary: 0.09, rewrite: 0.152, mention: 0.073, reference: 0.284) | time: 509.3
+******************************************************************************************
+Epoch: 6 | dev total loss: 0.887 (binary: 0.25, rewrite: 0.108, mention: 0.097, reference: 0.434) | time: 47.4
+Epoch: 6 | dev: QR Binary F1: 86.99 (92.95), LM: P: 88.32 R: 87.42 F1: 87.35 (60.91) | COREF P: 77.04 R: 70.20 F1: 73.45 (69.62) | time: 198.5
+Epoch: 6 | train total loss: 0.491 (binary: 0.07, rewrite: 0.127, mention: 0.069, reference: 0.221) | time: 593.3
+******************************************************************************************
+Epoch: 7 | dev total loss: 0.929 (binary: 0.26, rewrite: 0.114, mention: 0.099, reference: 0.456) | time: 42.8
+Epoch: 7 | dev: QR Binary F1: 87.33 (93.16), LM: P: 87.70 R: 87.76 F1: 87.19 (58.65) | COREF P: 76.79 R: 70.21 F1: 73.34 (69.46) | time: 191.2
+Epoch: 7 | train total loss: 0.413 (binary: 0.05, rewrite: 0.109, mention: 0.062, reference: 0.190) | time: 512.2
+******************************************************************************************
+Epoch: 8 | dev total loss: 0.981 (binary: 0.30, rewrite: 0.115, mention: 0.096, reference: 0.465) | time: 42.7
+Epoch: 8 | dev: QR Binary F1: 86.79 (93.37), LM: P: 88.20 R: 88.31 F1: 87.77 (59.59) | COREF P: 78.68 R: 68.16 F1: 73.04 (69.23) | time: 168.7
+Epoch: 8 | train total loss: 0.352 (binary: 0.04, rewrite: 0.092, mention: 0.058, reference: 0.158) | time: 489.0
+******************************************************************************************
+Epoch: 9 | dev total loss: 1.008 (binary: 0.30, rewrite: 0.117, mention: 0.098, reference: 0.492) | time: 43.0
+Epoch: 9 | dev: QR Binary F1: 87.31 (93.32), LM: P: 88.12 R: 88.24 F1: 87.66 (59.04) | COREF P: 75.81 R: 71.31 F1: 73.48 (69.56) | time: 180.8
+Best score in "best-JOINT": 80.57. Save model in checkpoint/cread_best-JOINT!
+
+Epoch: 9 | train total loss: 0.306 (binary: 0.04, rewrite: 0.078, mention: 0.054, reference: 0.137) | time: 502.8
+******************************************************************************************
+Epoch: 10 | dev total loss: 1.066 (binary: 0.34, rewrite: 0.120, mention: 0.098, reference: 0.508) | time: 42.8
+Epoch: 10 | dev: QR Binary F1: 86.49 (92.95), LM: P: 88.09 R: 87.93 F1: 87.56 (61.02) | COREF P: 78.01 R: 70.23 F1: 73.91 (70.06) | time: 176.6
+Best score in "best-JOINT": 80.74. Save model in checkpoint/cread_best-JOINT!
+
+Epoch: 10 | train total loss: 0.267 (binary: 0.03, rewrite: 0.071, mention: 0.050, reference: 0.120) | time: 498.5
+******************************************************************************************
+Epoch: 11 | dev total loss: 1.104 (binary: 0.36, rewrite: 0.118, mention: 0.098, reference: 0.533) | time: 42.8
+Epoch: 11 | dev: QR Binary F1: 87.70 (93.58), LM: P: 88.50 R: 88.26 F1: 87.90 (61.32) | COREF P: -281.86 R: -286.07 F1: -284.06 (-1000.00) | time: 176.9
+Epoch: 11 | train total loss: 0.236 (binary: 0.02, rewrite: 0.062, mention: 0.047, reference: 0.106) | time: 498.4
+******************************************************************************************
+Epoch: 12 | dev total loss: 1.179 (binary: 0.42, rewrite: 0.122, mention: 0.099, reference: 0.537) | time: 42.7
+Epoch: 12 | dev: QR Binary F1: 86.97 (93.27), LM: P: 88.68 R: 88.33 F1: 88.00 (62.78) | COREF P: 78.96 R: 71.67 F1: 75.13 (71.40) | time: 173.3
+Best score in "best-JOINT": 81.56. Save model in checkpoint/cread_best-JOINT!
+
+Epoch: 12 | train total loss: 0.218 (binary: 0.01, rewrite: 0.054, mention: 0.044, reference: 0.107) | time: 494.2
+******************************************************************************************
+Epoch: 13 | dev total loss: 1.201 (binary: 0.44, rewrite: 0.123, mention: 0.100, reference: 0.541) | time: 42.8
+Epoch: 13 | dev: QR Binary F1: 86.78 (93.11), LM: P: 88.17 R: 88.14 F1: 87.69 (61.74) | COREF P: 79.38 R: 69.81 F1: 74.28 (70.65) | time: 189.9
+Epoch: 13 | train total loss: 0.194 (binary: 0.01, rewrite: 0.048, mention: 0.042, reference: 0.091) | time: 510.8
+******************************************************************************************
+Epoch: 14 | dev total loss: 1.201 (binary: 0.43, rewrite: 0.123, mention: 0.099, reference: 0.548) | time: 44.4
+Epoch: 14 | dev: QR Binary F1: 87.80 (93.58), LM: P: 88.55 R: 88.40 F1: 87.97 (62.66) | COREF P: 79.02 R: 71.14 F1: 74.87 (71.22) | time: 181.3
+Epoch: 14 | train total loss: 0.189 (binary: 0.01, rewrite: 0.046, mention: 0.041, reference: 0.089) | time: 510.8
+******************************************************************************************
+Epoch: 15 | dev total loss: 1.216 (binary: 0.44, rewrite: 0.126, mention: 0.100, reference: 0.552) | time: 44.5
+Epoch: 15 | dev: QR Binary F1: 87.41 (93.42), LM: P: 88.51 R: 88.41 F1: 87.97 (62.83) | COREF P: 79.37 R: 70.85 F1: 74.86 (71.23) | time: 182.1
+Epoch: 15 | train total loss: 0.176 (binary: 0.01, rewrite: 0.043, mention: 0.039, reference: 0.085) | time: 508.9
+******************************************************************************************
+Reach max epoch: 16!
