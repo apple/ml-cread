@@ -1,15 +1,12 @@
 # CREAD: Combined Resolution of Ellipses and Anaphora in Dialogues 
----
 This is the source code of the paper **CREAD: Combined Resolution of Ellipses and Anaphora in Dialogues**.
 In this work, we propose a novel joint learning framework of modeling coreference resolution and query rewriting for complex, multi-turn dialogue understanding.
 The coreference resolution [MuDoCo](https://github.com/facebookresearch/mudoco) dataset augmented with our query rewrite annotation is released as well.
 
 ## Task Description
----
 Given an ongoing dialogue between a user and a dialogue assistant, for the user query, the model is required to predict both coreference links between the query and the dialogue context, and the self\-contained rewritten user query that is independent to the dialogue context
 
 ## Dataset
----
 The MuDoCo dataset is a public dataset that contains 7.5k task\-oriented multi\-turn dialogues across 6 domains (calling, messaging, music, news, reminders, weather). Each dialogue turn is annotated with coreference links (`links` field). Please refer to [MuDoCo](https://github.com/facebookresearch/mudoco) for more details.
 
 In the **MuDoCo\-QR\-dataset** used in work, we annotate the query rewrite for each utterance, including both user and system turn. On top of the MudoCo data format, we add three fields `graded`, `rewrite_required` and `rewritten_utterance`. Most of the turns are with annotated with query rewrite (`graded`==`true`). Only 1.4% dialogue turns with incomplete dialogue context (e.g., missing turns) in MuDoCo are filtered out (`graded`==`false`). `rewrite_required` records whether the input utterance (`utterance`) should be rewritten or not. `rewritten_utterance` is the rewritten query, same as the `utterance` if `rewrite_required`==`false`.
