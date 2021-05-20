@@ -3,7 +3,10 @@
 # Copyright (C) 2021 Apple Inc. All Rights Reserved.
 #
 
-''' the evaluation code for coreference resolution is adapted from https://github.com/ns-moosavi/coval '''
+'''
+Evaluation script
+The evaluation code for coreference resolution is adapted from https://github.com/ns-moosavi/coval
+'''
 
 import sys
 import os

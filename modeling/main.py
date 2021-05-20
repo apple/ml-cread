@@ -3,6 +3,10 @@
 # Copyright (C) 2021 Apple Inc. All Rights Reserved.
 #
 
+'''
+Main file for running training/testing a CREAD model
+'''
+
 import os
 import sys
 import json

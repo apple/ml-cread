@@ -3,6 +3,10 @@
 # Copyright (C) 2021 Apple Inc. All Rights Reserved.
 #
 
+'''
+This script processes the raw mudoco dataset into the training format, stored in the proc_data folder.
+'''
+
 import os
 import sys
 import json
@@ -147,9 +151,9 @@ spk_offset = len(usr_token) + 1 # include a space
 total_dial, incomplete_dial = 0, 0 # num of dialogues, total: 7509, incomplete: 168
 total_example, used_example = 0, 0 # num of examples
 
-# i/o data path
-IN_DATA_PATH = "MuDoCo-QR-dataset"
-OUT_DATA_PATH = "proc_data"
+# i/o absolute data path
+IN_DATA_PATH = os.path.join(os.path.dirname(os.getcwd()), "MuDoCo-QR-dataset")
+OUT_DATA_PATH = os.path.join(os.getcwd(), "proc_data")
 
 content = {data_type: [] for data_type in ['train', 'dev', 'test']}
 DATA = {domain: copy.deepcopy(content) for domain in (domains+['all'])}

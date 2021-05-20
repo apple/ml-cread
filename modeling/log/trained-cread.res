@@ -3,7 +3,7 @@ Load model, tokenizer from checkpoint/trained-cread
 Data Statistics: dev -> 1901 examples
 Data Statistics: dev -> 1901 examples
 Data Statistics: test -> 1988 examples
-Epoch: Eval | dev total loss: 1.179 (binary: 0.42, rewrite: 0.122, mention: 0.099, reference: 0.537) | time: 44.0
+Epoch: Eval | dev total loss: 1.179 (binary: 0.42, rewrite: 0.122, mention: 0.099, reference: 0.537) | time: 42.5
 Problem in the coreference annotation:
  USR	calling-dial216-turn6	3	Billy	0)
 
@@ -24,7 +24,7 @@ muc        Recall: 69.57  Precision: 78.27  F1: 73.67
 bcub       Recall: 70.99  Precision: 79.15  F1: 74.85
 ceafe      Recall: 74.46  Precision: 79.45  F1: 76.87
 lea        Recall: 68.01  Precision: 75.14  F1: 71.40
-Epoch: Dev | dev: QR Binary F1: 86.97 (93.27), LM: P: 88.68 R: 88.33 F1: 88.00 (62.78) | COREF P: 78.96 R: 71.67 F1: 75.13 (71.40) | time: 177.6
+Epoch: Dev | dev: QR Binary F1: 86.97 (93.27), LM: P: 88.68 R: 88.33 F1: 88.00 (62.78) | COREF P: 78.96 R: 71.67 F1: 75.13 (71.40) | time: 166.4
 
 ************************ QR Result on dev ************************
 	Macro P R F1 | Micro P R F1 | BLEU | ROUGE-1 -2 L F1
@@ -58,7 +58,7 @@ muc        Recall: 70.41  Precision: 77.14  F1: 73.62
 bcub       Recall: 72.36  Precision: 78.56  F1: 75.33
 ceafe      Recall: 76.69  Precision: 80.18  F1: 78.40
 lea        Recall: 69.57  Precision: 74.88  F1: 72.13
-Epoch: Test | test: QR Binary F1: 89.01 (93.91), LM: P: 88.63 R: 88.40 F1: 87.99 (63.76) | COREF P: 78.63 R: 73.15 F1: 75.78 (72.13) | time: 200.5
+Epoch: Test | test: QR Binary F1: 89.01 (93.91), LM: P: 88.63 R: 88.40 F1: 87.99 (63.76) | COREF P: 78.63 R: 73.15 F1: 75.78 (72.13) | time: 187.3
 
 ************************ QR Result on test ************************
 	Macro P R F1 | Micro P R F1 | BLEU | ROUGE-1 -2 L F1

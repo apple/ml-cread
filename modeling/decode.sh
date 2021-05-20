@@ -3,6 +3,10 @@
 # Copyright (C) 2021 Apple Inc. All Rights Reserved.
 #
 
+####################################################
+# The script for decoding using a trained model
+####################################################
+
 # general info
 model_name=$1
 task=qr_coref

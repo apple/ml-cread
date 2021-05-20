@@ -8,6 +8,10 @@ from qr_eval.qr.rouge.scoring import Score
 
 LOGGER = logging.getLogger(__name__)
 
+'''
+Metrics for query rewrite
+'''
+
 
 # Contains a collection of metrics
 # Removing Bleu for now because of efficiency issue

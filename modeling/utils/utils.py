@@ -3,6 +3,10 @@
 # Copyright (C) 2021 Apple Inc. All Rights Reserved.
 #
 
+'''
+Utility file
+'''
+
 import re
 import sys
 import time

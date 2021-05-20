@@ -3,6 +3,10 @@
 # Copyright (C) 2021 Apple Inc. All Rights Reserved.
 #
 
+'''
+Model file
+'''
+
 import sys
 import torch
 import torch.nn as nn
