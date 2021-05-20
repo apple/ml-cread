@@ -69,8 +69,6 @@ The processed data will be stored in the `proc_data/` directory.
 ## Training
 Run `train.sh` to train the model, which calls `main.py` with default hyper-parameters.
 
-`job_name` can be random but not `trained-cread`.
-
 ```console
 >>> bash train.sh [job_name]
 ```
