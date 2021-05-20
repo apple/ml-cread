@@ -49,6 +49,13 @@ python3.6 and the packages in `requirements.txt`, install them by running
 >>> pip install -r requirements.txt
 ```
 
+## Running the Code
+Enter the `modeling` folder and follow the instruction below.
+
+```console
+>>> cd modeling
+```
+
 ## Data Pre-processing
 First run the following command to prepare the data for training.
 
