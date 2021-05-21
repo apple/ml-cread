@@ -1,8 +1,8 @@
 # CREAD: Combined Resolution of Ellipses and Anaphora in Dialogues 
 
 [**Paper**](https://arxiv.org/abs/2105.09914) |
-[**Tasks**](#Task) | [**Dataset**](#Dataset) | [**Evaluation**](#Run-the-code) |
-[**Citation**](#Citation) | [**License**](#License)
+[**Task**](#Task-Description) | [**Dataset**](#Dataset) | [**Run Code**](#Run-the-Code) |
+[**Citation**](#Citation) | [**License**](#License) | [**Contact**](#Contact-Us)
 
 This is the source code of the paper [CREAD: Combined Resolution of Ellipses and Anaphora in Dialogues](https://arxiv.org/abs/2105.09914).
 In this work, we propose a novel joint learning framework of modeling coreference resolution and query rewriting for complex, multi-turn dialogue understanding.
@@ -123,3 +123,4 @@ The code in this repository is licensed according to the [LICENSE](LICENSE) file
 
 ## Contact Us
 Please contact bht26@cam.ac.uk or hong\_yu@apple.com, or raise an issue in this repository.
+
