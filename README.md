@@ -1,5 +1,10 @@
 # CREAD: Combined Resolution of Ellipses and Anaphora in Dialogues 
-This is the source code of the paper **CREAD: Combined Resolution of Ellipses and Anaphora in Dialogues**.
+
+[**Paper**] (https://arxiv.org/abs/2105.09914) |
+[**Tasks**](#Task Description) | [**Dataset**](#Dataset) | [**Evaluation**](#Run the code) |
+[**Citation**](#Citation) | [**License**](#License)
+
+This is the source code of the paper [CREAD: Combined Resolution of Ellipses and Anaphora in Dialogues](https://arxiv.org/abs/2105.09914).
 In this work, we propose a novel joint learning framework of modeling coreference resolution and query rewriting for complex, multi-turn dialogue understanding.
 The coreference resolution [MuDoCo](https://github.com/facebookresearch/mudoco) dataset augmented with our query rewrite annotation is released as well.
 
@@ -49,7 +54,7 @@ python3.6 and the packages in `requirements.txt`, install them by running
 >>> pip install -r requirements.txt
 ```
 
-## Running the Code
+## Run the Code
 Enter the `modeling` folder and follow the instruction below.
 
 ```console
@@ -102,7 +107,16 @@ A reference decoding file (`decode/trained-cread.json`) is provided.
 More detailed explanation of other arguments can be found in `utils/utils.py`.
 
 ## Citation
-TODO
+```bibtex
+@misc{tseng2021cread,
+      title={CREAD: Combined Resolution of Ellipses and Anaphora in Dialogues}, 
+      author={Bo-Hsiang Tseng and Shruti Bhargava and Jiarui Lu and Joel Ruben Antony Moniz and Dhivya Piraviperumal and Lin Li and Hong Yu},
+      year={2021},
+      eprint={2105.09914},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI}
+}
+```
 
 ## License
 The code in this repository is licensed according to the [LICENSE](LICENSE) file.
