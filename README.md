@@ -1,7 +1,7 @@
 # CREAD: Combined Resolution of Ellipses and Anaphora in Dialogues 
 
-[**Paper**] (https://arxiv.org/abs/2105.09914) |
-[**Tasks**](#Task Description) | [**Dataset**](#Dataset) | [**Evaluation**](#Run the code) |
+[**Paper**](https://arxiv.org/abs/2105.09914) |
+[**Tasks**](#Task) | [**Dataset**](#Dataset) | [**Evaluation**](#Run-the-code) |
 [**Citation**](#Citation) | [**License**](#License)
 
 This is the source code of the paper [CREAD: Combined Resolution of Ellipses and Anaphora in Dialogues](https://arxiv.org/abs/2105.09914).
