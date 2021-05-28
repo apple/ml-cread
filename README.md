@@ -108,13 +108,22 @@ More detailed explanation of other arguments can be found in `utils/utils.py`.
 
 ## Citation
 ```bibtex
-@misc{tseng2021cread,
-      title={CREAD: Combined Resolution of Ellipses and Anaphora in Dialogues}, 
-      author={Bo-Hsiang Tseng and Shruti Bhargava and Jiarui Lu and Joel Ruben Antony Moniz and Dhivya Piraviperumal and Lin Li and Hong Yu},
-      year={2021},
-      eprint={2105.09914},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI}
+@inproceedings{tseng-etal-2021-cread,
+    title = "{CREAD}: Combined Resolution of Ellipses and Anaphora in Dialogues",
+    author = "Tseng, Bo-Hsiang  and
+      Bhargava, Shruti  and
+      Lu, Jiarui  and
+      Moniz, Joel Ruben Antony  and
+      Piraviperumal, Dhivya  and
+      Li, Lin  and
+      Yu, Hong",
+    booktitle = "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+    month = jun,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2021.naacl-main.265",
+    pages = "3390--3406",
 }
 ```
 
