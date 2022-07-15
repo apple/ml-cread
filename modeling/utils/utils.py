@@ -54,21 +54,21 @@ def get_args():
 	parser = argparse.ArgumentParser(description='')
 
 	# general info
-	parser.add_argument('--mode', type=str, required=True, help='')
-	parser.add_argument('--task', type=str, required=True, help='which task [qr, coref, qr_coref] to perform? \
+	parser.add_argument('--mode', type=str,  default = 'training',help='')
+	parser.add_argument('--task', type=str,  default = "qr_coref",help='which task [qr, coref, qr_coref] to perform? \
 		`qr` for `qr-only` model; `coref` for `coref-only` model; `both` for `joint learning` model')
 	parser.add_argument('--seed', type=int, default=1122)
-	parser.add_argument('--model_name', type=str, required=True, help='model name, can be random but has to be provided')
+	parser.add_argument('--model_name', type=str, default = "CREAD_Model.bin", help='model name, can be random but has to be provided')
 	parser.add_argument('--model_name_or_path', type=str, default='gpt2')
 	parser.add_argument('--checkpoint', type=str, default='', help='path of your model to save/load')
 	parser.add_argument('--disable_display', type=str2bool, default=False, help='display progress bar or not')
 
 	# data path
-	parser.add_argument('--train_file', type=str, default='')
-	parser.add_argument('--dev_file', type=str, default='')
-	parser.add_argument('--test_file', type=str, default='')
-	parser.add_argument('--dev_conll', type=str, default='')
-	parser.add_argument('--test_conll', type=str, default='')
+	parser.add_argument('--train_file', type=str, default='proc_data/all/train.json')
+	parser.add_argument('--dev_file', type=str, default='proc_data/all/dev.json')
+	parser.add_argument('--test_file', type=str, default='proc_data/all/test.json')
+	parser.add_argument('--dev_conll', type=str, default='proc_data/all/dev.conll')
+	parser.add_argument('--test_conll', type=str, default='proc_data/all/test.conll')
 
 	# training
 	parser.add_argument('--load_pretrained_weight', type=str2bool, default=True, \

@@ -18,9 +18,10 @@ from transformers import (
 	GPT2PreTrainedModel
 )
 
+# 搭建联合模型
 class JointModel(GPT2PreTrainedModel):
 	def __init__(self, config, **kwargs):
-		super().__init__(config)
+		super(JointModel,self).__init__(config)
 		self.args = kwargs['args']
 		self.config = config
 
@@ -65,10 +66,10 @@ class JointModel(GPT2PreTrainedModel):
 
 		return {"input_ids": input_ids, "past": past, "use_cache": kwargs["use_cache"]}
 
-
+	# 计算参考损失
 	def _compute_reference_loss(self, batch, attentions):
 		'''
-			attentions: all attnetion heads tuple of (B, n_heads, T, T)
+			attentions: 所有attention头的元组（B, n_heads, T, T）。
 		'''
 		LOSS, c = 0, 0
 		for layer_idx in range(self.config.n_layer): # iterate layers
@@ -322,7 +323,7 @@ class JointModel(GPT2PreTrainedModel):
 
 		# run gpt2
 		# last hidden state, (presents), (all hidden_states), (attentions)
-		transformer_outputs = self.transformer(input_ids, past=past, attention_mask=attention_mask,
+		transformer_outputs = self.transformer(input_ids, attention_mask=attention_mask,
 												token_type_ids=token_type_ids, position_ids=position_ids,
 												head_mask=head_mask, inputs_embeds=inputs_embeds, use_cache=use_cache,
 												output_attentions=True, output_hidden_states=True)
@@ -424,7 +425,7 @@ def _extend_mask(mask):
 
 
 def _post_proc(gen):
-	''' gen: a list of tokens '''
+	'''gen：一个令牌的列表 '''
 	if '<SEP>' in gen:
 		gen = gen[gen.index('<SEP>')+1: ]
 	if '<EOS>' in gen:
@@ -432,9 +433,12 @@ def _post_proc(gen):
 	return gen
 
 
+
+
+
 def decode(args, batch, model, tokenizer):
 	'''
-		decode query rewriting and coreference resolution
+		解码查询重写和核心参考解析
 	'''
 
 	if 'coref' in args.task:
@@ -563,9 +567,11 @@ def predict_coref(args, batch, model, tokenizer):
 	return out
 
 
+
+# 定义查询重写的函数
 def generate(args, batch, model, tokenizer, coref_pred):
 	'''
-		Generation of query rewriting
+		查询重写的生成
 	'''
 	# basic info
 	input_ids, attention_mask, token_type_ids = batch['input_ids'], batch['attention_mask'], batch['token_type_ids']
@@ -631,3 +637,6 @@ def generate(args, batch, model, tokenizer, coref_pred):
 		sentences.append(' '.join(gen))
 	assert len(sentences) == 1
 	return binary_class_pred, sentences
+
+
+
